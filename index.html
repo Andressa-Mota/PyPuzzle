@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyPuzzle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>PyPuzzle</h1>
+        <div class="container">
+            <div class="items">
+                <div id="draggable1" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                    draggable1
+                 </div>
+                <div id="draggable2" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                    draggable2
+                </div>
+                <div id="draggable3" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                    draggable3
+                </div>
+                <div id="draggable4" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                    draggable4
+                </div>
+            </div>
+            <div class="dropzone" id="dropzone" ondragover="dragOver(event)" ondrop="onDrop(event)">
+                dropzone
+            </div>
+        </div>
+        <p id="result"></p>
+        <button onclick="checkOrder()">CONFERIR</button>
+        <button onclick="reloadPage()">RECOMEÇAR</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
