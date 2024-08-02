@@ -29,3 +29,28 @@
     flex-grow: 1;
     padding: 10px;
   }
+  .slider {
+    position: relative;
+    width: 100vw; /* 100% da largura da janela de visualização */
+    height: 100vh; /* 100% da altura da janela de visualização */
+}
+
+.python {
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente */
+  left: 100%; /* Começa fora da tela à direita */
+  transform: translateY(-50%); /* Ajusta a centralização vertical */
+  animation: slide 5s linear infinite; /* Animação com duração de 5 segundos e repetição infinita */
+}
+
+@keyframes slide {
+  0% {
+      left: 100%; /* Começa fora da tela à direita */
+  }
+  50% {
+      left: 50%; /* Move até o centro da tela */
+  }
+  100% {
+      left: -100%; /* Move para fora da tela à esquerda */
+  }
+}
