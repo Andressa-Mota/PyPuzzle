@@ -1,38 +1,40 @@
-.container{
-    border: 2px solid #DFA612;
-    color: black;
-    display: flex;
-    font-family: sans-serif;
-    font-weight: bold;
-  }
+.container {
+  border: 2px solid #DFA612;
+  color: black;
+  display: flex;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.items {
+  flex-basis: 100%;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.draggable {
+  background-color: #4AAE9B;
+  font-weight: normal;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 500px;
+  text-align: center;
+}
  
-  .items {
-    flex-basis: 100%;
-    flex-grow: 1;
-    padding: 10px;
-  }
- 
-  .draggable {
-    background-color: #4AAE9B;
-    font-weight: normal;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    width: 200px;
-    text-align: center;
-  }
- 
-  .dropzone {
-    background-color: #6DB65B;
-    flex-basis: 100%;
-    flex-grow: 1;
-    padding: 10px;
-  }
-  .slider {
-    position: relative;
-    width: 100vw; /* 100% da largura da janela de visualização */
-    height: 100vh; /* 100% da altura da janela de visualização */
+.dropzone {
+  background-color: #6DB65B;
+  flex-basis: 100%;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.slider {
+  position: relative;
+  width: 100vw; /* 100% da largura da janela de visualização */
+  height: 100vh; /* 100% da altura da janela de visualização */
 }
 
 .python {
@@ -43,13 +45,19 @@
   animation: slide 5s linear infinite; /* Animação com duração de 5 segundos e repetição infinita */
 }
 
+.m-0 {
+  margin: 0;
+}
+
 @keyframes slide {
   0% {
       left: 100%; /* Começa fora da tela à direita */
   }
+
   50% {
       left: 50%; /* Move até o centro da tela */
   }
+
   100% {
       left: -100%; /* Move para fora da tela à esquerda */
   }
