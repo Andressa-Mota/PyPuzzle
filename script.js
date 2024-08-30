@@ -6,11 +6,15 @@ function dragStart(event) {
   }
 
   function onDrop(event) {
+    event.preventDefault()
     const id = event.dataTransfer.getData('text');
     const draggableElement = document.getElementById(id)
     const dropzone = event.target
+    
+    if(dropzone.classList.contains('dropzone')) {
+      dropzone.appendChild(draggableElement)
+    }
 
-    dropzone.appendChild(draggableElement)
     event.dataTransfer.clearData()
   }
 
