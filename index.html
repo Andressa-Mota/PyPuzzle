@@ -10,30 +10,30 @@
 <body>
     <main>
         <h1>PyPuzzle</h1>
-        <div class="container">
+        <section class="container">
             <div class="items">
-                <div id="draggable1" class="draggable"  draggable="true" ondragstart="dragStart(event)">
-                    draggable1
-                 </div>
-                <div id="draggable2" class="draggable"  draggable="true" ondragstart="dragStart(event)">
-                    draggable2
-                </div>
-                <div id="draggable3" class="draggable"  draggable="true" ondragstart="dragStart(event)">
-                    draggable3
-                </div>
-                <div id="draggable4" class="draggable"  draggable="true" ondragstart="dragStart(event)">
-                    draggable4
-                </div>
+                <p id="draggable1" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                    first_number = float(input("Digite o primeiro número: "))
+                </p>
+                <p id="draggable2" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                    second_number = float(input("Digite o segundo número: "))
+                </p>
+                <p id="draggable3" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                    sum = first_number + second_number
+                </p>
+                <p id="draggable4" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                    print(f"Resultado: {soma}")
+                </p>
             </div>
-            <div class="dropzone" id="dropzone" ondragover="dragOver(event)" ondrop="onDrop(event)">
-                dropzone
-            </div>
-        </div>
+            <section class="dropzone" id="dropzone" ondragover="dragOver(event)" ondrop="onDrop(event)">
+                <h2 class="m-0">Resposta:</h2>
+            </section>
+        </section>
         <p id="result"></p>
         <button onclick="checkOrder()">CONFERIR</button>
         <button onclick="reloadPage()">RECOMEÇAR</button>
         <div class="slider">
-            <img src="/assets/cutepython.png" alt="cobrinha" class="python">
+            <img src="./assets/python_2.gif" alt="cobrinha" class="python">
         </div>
     </main>
     <script src="script.js"></script>
