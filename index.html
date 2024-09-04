@@ -9,9 +9,13 @@
 </head>
 <body>
     <main>
-        <h1>PyPuzzle</h1>
+        <div class="beggin">
+            <img  class="logo" src="assets/logo.png" alt="logo">
+            <div class="title"> <p>Monte um programa em Python que realize as quatro operações
+                matemáticas </p></div>
+        </div>
         <section class="container">
-            <div class="items">
+            <div class="container-dragg">
                 <p id="draggable1" class="draggable"  draggable="true" ondragstart="dragStart(event)">
                     first_number = float(input("Digite o primeiro número: "))
                 </p>
@@ -27,13 +31,17 @@
             </div>
             <section class="dropzone" id="dropzone" ondragover="dragOver(event)" ondrop="onDrop(event)">
                 <h2 class="m-0">Resposta:</h2>
+                <p id="result"></p>
             </section>
+
         </section>
-        <p id="result"></p>
-        <button onclick="checkOrder()">CONFERIR</button>
-        <button onclick="reloadPage()">RECOMEÇAR</button>
+        <div class="buttons">
+            <button class="b-check" onclick="checkOrder()">CONFERIR</button>
+            <button  class="b-reload" onclick="reloadPage()">RECOMEÇAR</button>
+        </div>
         <div class="slider">
-            <img src="./assets/python_2.gif" alt="cobrinha" class="python">
+            <img src="./assets/cutepython.png
+            " alt="cobrinha" class="python">
         </div>
     </main>
     <script src="script.js"></script>
