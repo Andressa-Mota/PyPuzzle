@@ -1,4 +1,5 @@
 html, body {
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -9,7 +10,6 @@ body {
   width: 100vw;
   position: absolute;
   background-color: #231b1b;
-  overflow-y: hidden;
   margin: 0;
   padding: 0;
 }
@@ -31,38 +31,8 @@ body {
   border-radius: 15px;
   padding: 10px;
   width: 43%;
-  height: 69vh;
-}
-
-.begin {
-  display: flex;
-  padding: 10px 10px;
-    gap: 10vw;
-}
-
-.logo {
-  width: 12.2vw;
-  height: 16vh;
-}
-
-.title {
-  font-size: 22px;
-  background-color: white;
-  color: black;
-  border-color: black;
-  border-radius: 15px;
-  margin-top: 16px;
-  width: 68vw;
-  height: 10vh;
-  text-align: center;
-}
-
-.draggable {
-  width: 400px;
-  position: relative;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  margin: -4px;
-
+  height: 80vh;
+  box-shadow: 0 0 15px 2px rgba(82, 113, 255, 0.6);
 }
 
 .dropzone {
@@ -74,7 +44,43 @@ body {
   border-radius: 15px;
   padding: 10px;
   width: 50%;
-  height: 69vh;
+  height: 80vh;
+  box-shadow: 0 0 15px 2px rgba(0, 238, 99, 0.6);
+}
+
+.begin {
+  display: flex;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  gap: 4vw;
+}
+
+.logo {
+  margin-left: 40px;
+  width: 14vw;
+  height: auto;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 22px;
+  background-color: white;
+  color: black;
+  border-color: black;
+  border-radius: 15px;
+  padding: 20px;
+  width: 70vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.draggable {
+  width: 400px;
+  position: relative;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  margin: -4px;
 }
 
 .python {
@@ -86,12 +92,14 @@ body {
 }
 
 .b-check {
+  font-weight: bold;
   background-color: #00ee63;
   border-radius: 15px;
+  border: none;
   color: black;
   width: 10vw;
   height: 5vh;
-  border: solid black 1px;
+  box-shadow: 0 0 15px 2px rgba(0, 238, 99, 0.6);
 }
 
 .b-check:hover {
@@ -99,12 +107,15 @@ body {
 }
 
 .b-reload {
+  font-weight: bold;
   background-color: #5271ff;
-  border-radius: 15px; 
+  border-radius: 15px;
+  border: none;
   color: white;
   width: 10vw;
   height: 5vh;
-  border: solid black 1px;
+  margin-right: 20px;
+  box-shadow: 0 0 15px 2px rgba(82, 113, 255, 0.6);
 }
 
 .b-reload:hover {
@@ -112,8 +123,10 @@ body {
 }
 
 .buttons {
-  padding-left: 76vw;
-  margin-top: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  margin-right: 2vw;
 }
 
 #result {
