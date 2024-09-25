@@ -3,6 +3,7 @@ html, body {
   padding: 0;
   height: 100%;
 }
+
 body {
   height: 100vh;
   width: 100vw;
@@ -21,7 +22,7 @@ body {
   padding: 10px;
 }
 
-.container-dragg {
+.container-drag {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,16 +33,19 @@ body {
   width: 43%;
   height: 69vh;
 }
-.beggin{
+
+.begin {
   display: flex;
   padding: 10px 10px;
     gap: 10vw;
 }
-.logo{
+
+.logo {
   width: 12.2vw;
   height: 16vh;
 }
-.title{
+
+.title {
   font-size: 22px;
   background-color: white;
   color: black;
@@ -52,6 +56,7 @@ body {
   height: 10vh;
   text-align: center;
 }
+
 .draggable {
   width: 400px;
   position: relative;
@@ -79,12 +84,8 @@ body {
   top:0;
   animation: slide 5s linear infinite; 
 }
-#result{
-  font-size: 30px;
-  color: red;
-  padding-top: 47vh;
-}
-.b-check{
+
+.b-check {
   background-color: #00ee63;
   border-radius: 15px;
   color: black;
@@ -92,10 +93,12 @@ body {
   height: 5vh;
   border: solid black 1px;
 }
-.b-check:hover{
+
+.b-check:hover {
   background-color: #00ee6348;
 }
-.b-reload{
+
+.b-reload {
   background-color: #5271ff;
   border-radius: 15px; 
   color: white;
@@ -103,12 +106,20 @@ body {
   height: 5vh;
   border: solid black 1px;
 }
-.b-reload:hover{
+
+.b-reload:hover {
   background-color: #5272ff52;
 }
-.buttons{
+
+.buttons {
   padding-left: 76vw;
   margin-top: 0;
+}
+
+#result {
+  font-size: 30px;
+  color: red;
+  padding-top: 47vh;
 }
 
 @keyframes slide {

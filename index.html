@@ -8,36 +8,30 @@
     <link rel="icon" href="/assets/cutepython.png" type="image/png">
 </head>
 <body>
-
     <main>
-        <div class="beggin">
+        <div class="begin">
             <img  class="logo" src="assets/logo.png" alt="logo">
-            <div class="title"> <p>Monte um programa em Python que realize as quatro operações
-                matemáticas na seguinte ordem: Soma, subtração, Multiplicação e Divisão. </p></div>
+            <div class="title">
+                <p>Monte um programa em Python que realize as quatro operações matemáticas na seguinte ordem: Soma, subtração, Multiplicação e Divisão.</p>
+            </div>
         </div>
         <section class="container">
-            <div class="container-dragg">
-                <img src="/assets/pecas/8.png" alt="peça"  id="draggable8" class="draggable"  draggable="true" ondragstart="dragStart(event)">
-                <img src="/assets/pecas/1.png" alt="peça"  id="draggable1" class="draggable"  draggable="true" ondragstart="dragStart(event)">
-                <img src="/assets/pecas/10.png" alt="peça"  id="draggable10" class="draggable"  draggable="true" ondragstart="dragStart(event)">
-                <img src="/assets/pecas/9.png" alt="peça"  id="draggable9" class="draggable"  draggable="true" ondragstart="dragStart(event)">
-                <img src="/assets/pecas/2.png" alt="peça"  id="draggable2" class="draggable"  draggable="true" ondragstart="dragStart(event)">
-                <img src="/assets/pecas/4.png" alt="peça"  id="draggable4" class="draggable"  draggable="true" ondragstart="dragStart(event)">
-                <img src="/assets/pecas/13.png" alt="peça"  id="draggable13" class="draggable"  draggable="true" ondragstart="dragStart(event)">
-                <img src="/assets/pecas/5.png" alt="peça"  id="draggable5" class="draggable"  draggable="true" ondragstart="dragStart(event)">
-                <img src="/assets/pecas/7.png" alt="peça"  id="draggable7" class="draggable"  draggable="true" ondragstart="dragStart(event)">
-                <img src="/assets/pecas/6.png" alt="peça"  id="draggable6" class="draggable"  draggable="true" ondragstart="dragStart(event)">
-                <img src="/assets/pecas/12.png" alt="peça"  id="draggable12" class="draggable"  draggable="true" ondragstart="dragStart(event)">
-                <img src="/assets/pecas/11.png" alt="peça"  id="draggable11" class="draggable"  draggable="true" ondragstart="dragStart(event)">
-                <img src="/assets/pecas/3.png" alt="peça"  id="draggable3" class="draggable"  draggable="true" ondragstart="dragStart(event)">
-                
-               
-
+            <div class="container-drag">
+                <img src="/assets/pieces/8.png" alt="peça"  id="draggable8" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                <img src="/assets/pieces/1.png" alt="peça"  id="draggable1" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                <img src="/assets/pieces/10.png" alt="peça"  id="draggable10" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                <img src="/assets/pieces/9.png" alt="peça"  id="draggable9" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                <img src="/assets/pieces/2.png" alt="peça"  id="draggable2" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                <img src="/assets/pieces/4.png" alt="peça"  id="draggable4" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                <img src="/assets/pieces/13.png" alt="peça"  id="draggable13" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                <img src="/assets/pieces/5.png" alt="peça"  id="draggable5" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                <img src="/assets/pieces/7.png" alt="peça"  id="draggable7" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                <img src="/assets/pieces/6.png" alt="peça"  id="draggable6" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                <img src="/assets/pieces/12.png" alt="peça"  id="draggable12" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                <img src="/assets/pieces/11.png" alt="peça"  id="draggable11" class="draggable"  draggable="true" ondragstart="dragStart(event)">
+                <img src="/assets/pieces/3.png" alt="peça"  id="draggable3" class="draggable"  draggable="true" ondragstart="dragStart(event)">
             </div>
-            <section class="dropzone" id="dropzone" ondragover="dragOver(event)" ondrop="onDrop(event)">
-              
-            </section>
-
+            <section class="dropzone" id="dropzone" ondragover="dragOver(event)" ondrop="onDrop(event)"></section>
         </section>
         <div class="buttons">
             <button class="b-check" onclick="checkOrder()">CONFERIR</button>
