@@ -1,8 +1,8 @@
-const correctOrder = ['draggable1', 'draggable2', 'draggable3', 'draggable4']
+const correctOrder = ['draggable1', 'draggable2', 'draggable3', 'draggable4', 'draggable5', 'draggable6', 'draggable7', 'draggable8', 'draggable9', 'draggable10', 'draggable11', 'draggable12' , 'draggable13']
 
 function dragStart(event) {
     event.dataTransfer.setData('text/plain', event.target.id)
-    event.currentTarget.style.backgroundColor = 'yellow'
+
   }
 
   function onDrop(event) {
@@ -22,37 +22,38 @@ function dragStart(event) {
     const dropzone = document.getElementById('dropzone')
     const children = Array.from(dropzone.children)
     const ids = children.map(child => child.id)
-   
     if (JSON.stringify(ids) === JSON.stringify(correctOrder)) {
-      document.getElementById('result').innerText = 'Ordem correta!'
-    } else {
-      document.getElementById('result').innerText = 'Ordem incorreta!'
+      alert("ORDEM CORRETA!")
+      
     }
-  }
+      else{
+        alert("ORDEM INCORRETA!")
+      }
+    }
+  
 
   function reloadPage() { location.reload() }
   function dragOver(event) { event.preventDefault() }
 
   function getRandomPosition(element) {
-    const slider = document.querySelector('.slider')
-    const sliderWidth = slider.clientWidth
+    const slider = document.querySelector('body')
     const sliderHeight = slider.clientHeight
-    const elementWidth = element.clientWidth
     const elementHeight = element.clientHeight
-
-    const randomX = Math.floor(Math.random() * (sliderWidth - elementWidth))
+    console.log('Altura do contêiner:', sliderHeight);
     const randomY = Math.floor(Math.random() * (sliderHeight - elementHeight))
 
-    return { top: randomY, left: randomX }
+    return { top: Math.max(0, randomY) }
 }
 
 function moveImageRandomly() {
     const image = document.querySelector('.python')
     const newPosition = getRandomPosition(image)
 
+
     image.style.top = `${newPosition.top}px`
-    image.style.left = `${newPosition.left}px`
+    // image.style.left = `${newPosition.left}px`
 }
 
 setInterval(moveImageRandomly, 4000)
 moveImageRandomly()
+console.log('Slider dimensions:', document.querySelector('body').getBoundingClientRect());
