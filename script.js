@@ -20,6 +20,7 @@ function dragStart(event) {
 
 function onDrop(event) {
   event.preventDefault()
+  
   const id = event.dataTransfer.getData('text')
   const draggableElement = document.getElementById(id)
   const dropzone = event.target
@@ -53,8 +54,6 @@ function getRandomPosition(element) {
   const elementHeight = element.clientHeight
   const randomY = Math.floor(Math.random() * (sliderHeight - elementHeight))
 
-  console.log('Altura do contêiner:', sliderHeight)
-
   return { top: Math.max(0, randomY) }
 }
 
@@ -67,4 +66,3 @@ function moveImageRandomly() {
 
 setInterval(moveImageRandomly, 4000)
 moveImageRandomly()
-console.log('Slider dimensions:', document.querySelector('body').getBoundingClientRect())
