@@ -25,6 +25,7 @@ function onDrop(event) {
   const dropzone = event.target
   
   if(dropzone.classList.contains('dropzone')) {
+    draggableElement.style.margin = '-4px'
     dropzone.appendChild(draggableElement)
   }
 
@@ -62,7 +63,6 @@ function moveImageRandomly() {
     const newPosition = getRandomPosition(image)
 
     image.style.top = `${newPosition.top}px`
-    // image.style.left = `${newPosition.left}px`
 }
 
 setInterval(moveImageRandomly, 4000)
