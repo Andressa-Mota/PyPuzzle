@@ -8,14 +8,6 @@
   Drag and drop puzzle activity web page to reorganize python code on correct order.
 </div>
 
-## Table of Contents
-
-:small_blue_diamond: [What The Application Can Do](#what-the-application-can-do)
-
-:small_blue_diamond: [How to Run the Application](#how-to-run-the-application)
-
-:small_blue_diamond: [License](#license)
-
 ## What the Application Can Do
 
 - [x] Drag and drop code pieces to reorganize them;
