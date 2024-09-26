@@ -24,7 +24,7 @@
 
 - [ ] Create personalized activities;
 
-- [ ] Mobile support;
+- [ ] Mobile support.
 
 ## How to Run the Application
 
