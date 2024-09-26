@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Cadê Buffet</h1>
+  <h1>PyPuzzle</h1>
   <div>
     <img src="https://img.shields.io/static/v1?label=javascript&message=es6&color=yellow&style=for-the-badge&logo=javascript"/>
     <img src="http://img.shields.io/static/v1?label=Status&message=Development&color=GREEN&style=for-the-badge"/>
