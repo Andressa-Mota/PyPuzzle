@@ -2,7 +2,7 @@
   <h1>Cadê Buffet</h1>
   <div>
     <img src="https://img.shields.io/static/v1?label=javascript&message=es6&color=yellow&style=for-the-badge&logo=javascript"/>
-    <img src="http://img.shields.io/static/v1?label=Status&message=Finished&color=GREEN&style=for-the-badge"/>
+    <img src="http://img.shields.io/static/v1?label=Status&message=Development&color=GREEN&style=for-the-badge"/>
   </div><br>
 
   Drag and drop puzzle activity web page to reorganize python code on correct order.
