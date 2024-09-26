@@ -16,8 +16,18 @@
 
 - [ ] Create personalized activities;
 
-- [ ] Mobile support.
+- [ ] Mobile support;
+
+- [ ] Internationalization.
 
 ## How to Run the Application
 
 Just open the `index.html` file in a web browser to access the web page.
+
+## How to Use the Application
+
+1. Read the question description;
+2. Drag the code pieces from the left to the right on the correct order;
+3. Check if the order is correct;
+4. Click on CONFERIR button to check if the order is correct;
+5. Click on RECOMEÇAR button to restart.
