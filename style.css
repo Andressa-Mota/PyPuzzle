@@ -17,9 +17,8 @@ body {
 .container {
   display: flex;
   justify-content: space-around;
-  font-family: sans-serif;
-  font-weight: bold;
   padding: 10px;
+  width: 97%;
 }
 
 .container-drag {
@@ -31,7 +30,7 @@ body {
   border-radius: 15px;
   padding: 10px;
   width: 43%;
-  height: 80vh;
+  height: 75vh;
   box-shadow: 0 0 15px 2px rgba(82, 113, 255, 0.6);
 }
 
@@ -43,33 +42,35 @@ body {
   border: solid 2px #00ee63;
   border-radius: 15px;
   padding: 10px;
-  width: 50%;
-  height: 80vh;
+  width: 45%;
+  height: 75vh;
   box-shadow: 0 0 15px 2px rgba(0, 238, 99, 0.6);
 }
 
 .begin {
+  width: 98%;
   display: flex;
-  padding: 10px 10px;
-  margin-bottom: 20px;
-  gap: 4vw;
+  padding: 10px 0px;
+  gap: 2vw;
 }
 
 .logo {
   margin-left: 40px;
-  width: 14vw;
+  width: 12vw;
   height: auto;
 }
 
 .title {
   font-weight: bold;
-  font-size: 22px;
+  font-size: 18px;
   background-color: white;
   color: black;
   border-color: black;
   border-radius: 15px;
   padding: 20px;
+  margin: 20px 20px 0 20px;
   width: 70vw;
+  height: 7vh;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -82,7 +83,10 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   margin: -4px;
 }
-
+.seta{
+  height: 50px;
+  margin: 17% 0
+}
 .python {
   position: absolute;
   width: 6vw;
@@ -123,17 +127,15 @@ body {
 }
 
 .buttons {
+  position: relative;
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 20px;
-  margin-right: 2vw;
+  right: 39px;
+  top: 10px;
+  padding-bottom: 20px;
+
 }
 
-#result {
-  font-size: 30px;
-  color: red;
-  padding-top: 47vh;
-}
 
 @keyframes slide {
   0% {
@@ -146,5 +148,62 @@ body {
 
   100% {
       left: -100%; /* Move para fora da tela à esquerda */
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .draggable {
+    width: 351px;
+  }
+  .container-drag,
+  .dropzone {
+    width: 90%;
+    height: 60vh;
+    margin-bottom: 20px;
+  }
+  .begin {
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0px;
+    gap: 0vw;
+  }
+  .title {
+    margin: 0 0 10px 20px;
+    width: 90%;
+    font-size: 16px;
+    padding: 15px;
+    height: auto;
+  }
+
+  .logo {
+    width: 48vw;
+  }
+
+  .b-check,
+  .b-reload {
+    width: 25vw;
+    height: 4vh;
+  }
+  .buttons {
+    justify-content: center;
+    right: -14px;
+  
+  }
+
+  .python {
+    width: 17vw;
+    height: 8vh;
+  }
+
+  .seta {
+    height: 35px;
+    margin: 10% 0;
+    transform: rotate(90deg);
   }
 }
