@@ -21,9 +21,3 @@
 ## How to Run the Application
 
 Just open the `index.html` file in a web browser to access the web page.
-
-## License
-
-The [MIT License](https://github.com/Andressa-Mota/PyPuzzle/blob/main/LICENSE)
-
-Copyright ©️ 2024 - PyPuzzle
