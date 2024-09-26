@@ -14,22 +14,60 @@ const correctOrder = [
   'draggable13'
 ]
 
+let draggedElement = null
+
 function dragStart(event) {
-  event.dataTransfer.setData('text/plain', event.target.id)
+  draggedElement = event.target
+
+  if (event.type === 'touchstart') {
+    const touch = event.touches[0]
+
+    event.target.style.position = 'absolute'
+    event.target.style.left = `${touch.clientX - event.target.offsetWidth / 2}px`
+    event.target.style.top = `${touch.clientY - event.target.offsetHeight / 2}px`
+  } else {
+    event.dataTransfer.setData('text/plain', event.target.id)
+  }
+}
+
+function touchMove(event) {
+  const touch = event.touches[0]
+  draggedElement.style.left = `${touch.clientX - draggedElement.offsetWidth / 2}px`
+  draggedElement.style.top = `${touch.clientY - draggedElement.offsetHeight / 2}px`
+
+  const element = document.elementFromPoint(touch.clientX, touch.clientY)
+  
+  if (element && element.classList.contains('dropzone')) {
+    event.preventDefault()
+  }
 }
 
 function onDrop(event) {
   event.preventDefault()
-  const id = event.dataTransfer.getData('text')
-  const draggableElement = document.getElementById(id)
   const dropzone = event.target
-  
-  if(dropzone.classList.contains('dropzone')) {
-    draggableElement.style.margin = '-4px'
-    dropzone.appendChild(draggableElement)
+
+  if (dropzone.classList.contains('dropzone')) {
+    draggedElement.style.position = 'static'
+    draggedElement.style.margin = '-4px'
+    dropzone.appendChild(draggedElement)
   }
 
-  event.dataTransfer.clearData()
+  draggedElement = null
+}
+
+function dragOver(event) { event.preventDefault() }
+
+function touchEnd(event) {
+  const touch = event.changedTouches[0]
+  const element = document.elementFromPoint(touch.clientX, touch.clientY)
+  
+  if (element && element.classList.contains('dropzone')) {
+    draggedElement.style.margin = '-4px'
+    element.appendChild(draggedElement)
+  }
+
+  draggedElement.style.position = 'static'
+  draggedElement = null
 }
 
 function checkOrder() {
@@ -43,28 +81,18 @@ function checkOrder() {
     alert("ORDEM INCORRETA!")
   }
 }
-  
+
 function reloadPage() { location.reload() }
-function dragOver(event) { event.preventDefault() }
 
-function getRandomPosition(element) {
-  const slider = document.querySelector('body')
-  const sliderHeight = slider.clientHeight
-  const elementHeight = element.clientHeight
-  const randomY = Math.floor(Math.random() * (sliderHeight - elementHeight))
+document.querySelectorAll('.draggable').forEach(item => {
+  item.addEventListener('dragstart', dragStart)
+  item.addEventListener('touchstart', dragStart)
+  item.addEventListener('touchmove', touchMove)
+  item.addEventListener('touchend', touchEnd)
+})
 
-  console.log('Altura do contêiner:', sliderHeight)
-
-  return { top: Math.max(0, randomY) }
-}
-
-function moveImageRandomly() {
-    const image = document.querySelector('.python')
-    const newPosition = getRandomPosition(image)
-
-    image.style.top = `${newPosition.top}px`
-}
-
-setInterval(moveImageRandomly, 4000)
-moveImageRandomly()
-console.log('Slider dimensions:', document.querySelector('body').getBoundingClientRect())
+const dropzone = document.getElementById('dropzone')
+dropzone.addEventListener('dragover', dragOver)
+dropzone.addEventListener('drop', onDrop)
+dropzone.addEventListener('touchmove', touchMove)
+dropzone.addEventListener('touchend', touchEnd)
